@@ -69,7 +69,7 @@
     if (loja.endereco) a.append(Object.assign(document.createElement('small'), { textContent: loja.endereco }));
     // keepalive: o registro sobrevive à troca de página; se falhar, o cliente segue para a loja igual.
     if (rastreio) a.addEventListener('click', () => {
-      const q = new URLSearchParams({ tipo: 'clique', campanha: utm.get('utm_campaign') || '(sem campanha)', loja: loja.slug });
+      const q = new URLSearchParams({ tipo: 'clique', campanha: utm.get('utm_campaign') || 'sem_campanha', loja: loja.slug });
       fetch(`${rastreio}?${q}`, { keepalive: true, mode: 'no-cors' }).catch(() => {});
     });
     const li = document.createElement('li');
