@@ -8,3 +8,6 @@ const CONFIG = {
     { nome: "Unidade Dirceu", endereco: "Av. Joaquim Nelson, 1971", slug: "fornopaulistadirceu" }
   ]
 };
+
+// Permite que o painel /insights use os nomes das lojas.
+if (typeof module !== "undefined") module.exports = CONFIG;
